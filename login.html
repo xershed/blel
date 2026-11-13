@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>compito</title>
+
+</head>
+<body>
+
+    <h1>schermata registrazione</h1>
+
+
+    <form action="#" method="post">
+        <!-- Si mette action="#" quando non si sa ancora dove mandare i dati. -->
+        <label for="email">Email:</label>
+        <!-- Il label è collegato all'input tramite for="email" e id="email". -->
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <!-- Anche la password ha un label collegato al relativo input. -->
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Registrati</button>
+    </form>
+
+    <h1>schermata login</h1>
+    <form action="#" method="post">
+        <label for="login-email">Email:</label>
+        <!-- L'id login-email collega l'input al label; name="email" identifica il dato per il server. -->
+        <input type="email" id="login-email" name="email" required>
+ 
+        <label for="login-password">Password:</label>
+        <!-- L'id login-password collega l'input al label; name="password" identifica il dato per il server. -->
+        <input type="password" id="login-password" name="password" required>
+
+        <button type="submit">Accedi</button>
+        
+        
+    </form>
+    
+</body>
+</html>

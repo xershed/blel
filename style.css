@@ -1,0 +1,211 @@
+html {
+	/* Keep the page layout from shifting when the scrollbar appears. */
+    scrollbar-gutter: stable;
+}
+
+/* Remove the browser's default spacing from text inside the content boxes. */
+.content-box p,
+.content-box h2,
+.content-box h3,
+.content-box h4 {
+	margin: 0;
+}
+
+/* Shared heading panel styles */
+.content-box h1,
+.content-box h2,
+.content-box h3,
+.content-box h4 {
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	padding: 1.5rem;
+	background: rgba(0, 0, 0, 0.705);
+	border-radius: 8px;
+	border: 2px solid crimson;
+	transition: all 0.25s ease;
+	margin-bottom: 0;
+	letter-spacing: -0.5px;
+}
+
+/* Main h1 heading */
+.content-box h1 {
+	font-size: 3.5rem;
+}
+
+/* Smaller headings for the expandable sections */
+.content-box h2 {
+	font-size: 2.5rem;
+}
+
+.content-box h3 {
+	font-size: 2rem;
+}
+
+.content-box h4 {
+	font-size: 1.5rem;
+}
+
+.content-box {
+	/* Center the main content and stop it from becoming too wide. */
+	margin: 2rem auto;
+	max-width: 92%;
+}
+
+/* Second box: narrower and aligned to the right */
+#box {
+	/* Use the full page width so the image can sit on the far left. */
+	width: 100%;
+	margin: 500px 0 2rem;
+}
+
+#box > h2 {
+	/* Keep the h2 on the right while the image stays on the left. */
+	width: min(100%, 500px);
+	margin-left: auto;
+}
+
+.content-box h1.expandable,
+.content-box h2.expandable,
+.content-box h3.expandable,
+.content-box h4.expandable{
+	/* Show that the headings can be clicked to open or close their content. */
+	cursor: pointer;
+	user-select: none;
+}
+
+/* Make the heading grow slightly and glow when the mouse is over it. */
+.content-box h1:hover,
+.content-box h2:hover,
+.content-box h3:hover,
+.content-box h4:hover {
+	transform: scale(1.02);
+	background: rgba(0, 0, 0, 0.65);
+	box-shadow: 0 0 15px rgba(220, 20, 60, 0.4);
+}
+
+.expandable-content {
+	/* Hide expandable sections until JavaScript adds the active class. */
+	max-height: 0;
+	padding: 0 1.5rem;
+	transition: max-height 1s ease, padding 1s ease, opacity 1s ease; /* qua tempo transizioni generalefa */
+	opacity: 0;
+	overflow: hidden;
+	box-sizing: border-box;
+	background: rgba(0, 0, 0, 0.705);
+	border-radius: 0 0 8px 8px;
+	border-left: 2px solid crimson;
+	border-right: 2px solid crimson;
+	border-bottom: 2px solid crimson;
+}
+
+.expandable-content.active {
+	max-height: 1000px;
+	padding: 1.5rem;
+	opacity: 1;
+}
+
+.expandable-content p {
+	/* Make the paragraph comfortable to read inside the opened section. */
+	color: white;
+	margin: 0.5rem 0;
+	font-family: 'Inter', sans-serif;
+	font-size: 1.05rem;
+	line-height: 1.7;
+	font-weight: 400;
+}
+
+.content-box h2 {
+	margin-top: 0;
+}
+
+@media (max-width: 700px) {
+	#box {
+		width: 100%;
+		margin-top: 500px;
+	}
+
+	#box > h2 {
+		width: auto;
+	}
+}
+
+.expandable-content img {
+	/* Keep normal images from overflowing their content container. */
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0; 
+    border-radius: 8px;
+	margin-left: 0;
+	margin-right: auto;
+
+}	.expandable-content img {
+	/* Keep normal images from overflowing their content container. */
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0; 
+    border-radius: 8px;
+	margin-left: 0;
+	margin-right: auto;
+
+}	
+
+.box-image {
+	/* Start hidden and slightly to the left, then slide right when active. */
+	display: block;
+	/* This puts the image on the left side of the flex row. DESTRA SINISTRA */
+	order: -1;
+	width: min(40%, 600px);
+	height: auto;
+	margin: 1rem 0;
+	border-radius: 8px;
+	opacity: auto;
+	transform: translateX(-40px);
+	transition: opacity 1s ease, transform 1s ease;
+}
+
+.box-image.active {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.h2-content-layout {
+	/* This places the image and paragraph in one horizontal row. */
+	display: flex;
+	align-items: center;
+	/* This creates space between the image on the left and text on the right. */
+	gap: 2rem;
+}
+
+.h2-content-layout p {
+	/* This makes the paragraph use the remaining space on the right. */
+	flex: 1;
+}
+
+@media (max-width: 700px) {
+	.h2-content-layout {
+		/* On small screens, stack the content so it remains readable. */
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.box-image {
+		width: 100%;
+		max-width: 600px;
+	}
+}
+
+/* cambia velocita delle content box  */
+.expandable-content {
+	transition: max-height 1s ease, padding 1s ease, opacity 1s ease; }
+	#box h2 + .expandable-content {
+	transition: max-height 1s ease, padding 1s ease, opacity 1s ease;
+	}
+	#box h3 + .expandable-content {
+	transition: max-height 2s ease, padding 1s ease, opacity 1 ease;
+	}
+	#box h4 + .expandable-content {
+	transition: max-height 2s ease, padding 1s ease, opacity 1 ease;
+	}

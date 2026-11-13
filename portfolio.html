@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey its me Umberto :3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: url(teto.jpg);
+background-size: cover ;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+min-height: 1000vh;
+margin:0;">
+  <h1>schermata registrazione</h1>
+
+
+    <form action="#" method="post">
+        <!-- Si mette action="#" quando non si sa ancora dove mandare i dati. -->
+        <label for="email">Email:</label>
+        <!-- Il label è collegato all'input tramite for="email" e id="email". -->
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <!-- Anche la password ha un label collegato al relativo input. -->
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Registrati</button>
+    </form>
+
+    <h1>schermata login</h1>
+    <form action="#" method="post">
+        <label for="login-email">Email:</label>
+        <!-- L'id login-email collega l'input al label; name="email" identifica il dato per il server. -->
+        <input type="email" id="login-email" name="email" required>
+ 
+        <label for="login-password">Password:</label>
+        <!-- L'id login-password collega l'input al label; name="password" identifica il dato per il server. -->
+        <input type="password" id="login-password" name="password" required>
+
+        <button type="submit">Accedi</button>
+        
+        
+    </form>
+    
+    <main class="content-box">
+        <h1 class="expandable" onclick="toggleExpand(this)" style="color:crimson;">
+            Who is Umberto Galluccio? (btw this is more random shit trown together than a real portfolio)
+        </h1>
+
+        <div class="expandable-content">
+            <p>They/them/he/him with ADHD and various learning disabilities but with a passion for development and videogames
+                My dream is to become an indie game dev and a pokèmon vgc professional. i made this page to tell everyone about me
+                and if you like my style hopefully i convinced you to hire me to make some websites or make pokemon teams for you!</p>
+        </div>
+<img src="shogi-ichiban.gif" height="400px" width=“500px”> </a>
+        <div class="content-box" id="box">
+            <!-- This heading is the clickable title for the second expandable section. -->
+            <h2 class="expandable" onclick="toggleExpand(this)" style="color:crimson;">
+               what do i love to do in my free time?
+            </h2>
+            <div class="expandable-content">
+                <!-- Flexbox puts the paragraph and image beside each other. -->
+                <div class="h2-content-layout">
+                    <p> i love playing videogames and playing soccer (even though i probably cant this year :P) , and the main game i play its Pokèmon (especially VGC)
+                     VGC is the main and official competitive format of the Pokèmon games and i played it since i was a kid. but now i really focused onto it and im gonna play next year at the regional to hopefully win and get money out of this too
+                     i can givce you some examples of my teams (QUA LO DEVO RENDERE UN BOTTONE)
+                    </p>
+                    <!-- JavaScript adds the active class when this section is revealed. -->
+                    <img src="h2img.jpg" alt="Image 2" class="box-image">
+                </div>
+            </div>
+            <h3 class="expandable" onclick="toggleExpand(this)" style="color:crimson;">
+                My Pokémon teams
+                 <!-- cosi per aggiungere altre . -->
+            </h3>
+            <div class="expandable-content">
+                <!-- Flexbox puts the paragraph and image beside each other. -->
+                <div class="h2-content-layout">
+                    <p> 
+                        Im mainly an hard trick room player but im learning balance recently. 
+                        
+                    </p>
+                    <!-- JavaScript adds the active class when this section is revealed. -->
+                    <img src="pokemon.png" alt="Image 3" class="box-image">
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h4 class="expandable" onclick="toggleExpand(this)" style="color:crimson;">
+                dove mi puoi contattare?
+            </h4>
+        
+        <div class="expandable-content">
+             <p>
+                    you can contact me in a lot of places like on discord: Kapi  instagram: umberto_galluccio  or on my email:umbertogalluccio09@gmail.com or my number +39 351 83671981
+                    </p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+ 
+</body>
+</html>
